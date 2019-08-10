@@ -1,4 +1,4 @@
-INSERT INTO city (country_id, city_name, city_population, city_latitude, longitude),
+INSERT INTO city (country_id, city_name, city_population, city_latitude, city_longitude)
   VALUES
 (15, 'Istanbul', 15029231,	41.015137, 28.97953),
 (12, 'Moscow', 12615279, 55.751244, 37.618423),
