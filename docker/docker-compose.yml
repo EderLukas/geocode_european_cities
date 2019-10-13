@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+    web:
+      container_name: euro_cities_web
+      build:
+        context: ../web/
+        dockerfile: docker/Dockerfile
+      command: npm start && npm update
+      ports:
+        - "3000:3000"
+
+    api:
+      container_name: euro_cities_api
+      build:
+        context: ../php/
+        dockerfile: docker/Dockerfile
+      ports:
+        - "4000:80"
+
+    psql:
+      container_name: euro_cities_psql
+      build:
+        context: ../database/
+        dockerfile: docker/Dockerfile
+      volumes:
+        - /var/lib/postgresql/data
+      environment:
+        POSTGRES_PASSWORD: Tew3@gowas4T0InTq.
+        POSTGRES_USER: postgres
+      ports:
+        - "5432:5432"

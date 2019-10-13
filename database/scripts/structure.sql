@@ -1,3 +1,7 @@
+CREATE DATABASE euro_cities;
+
+\c euro_cities;
+
 CREATE TABLE country (
   country_id SERIAL PRIMARY KEY,
   country_name VARCHAR(200) NOT NULL
